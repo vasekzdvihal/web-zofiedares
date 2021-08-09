@@ -1,11 +1,13 @@
 <template>
-$END$
+  <div>
+    this is instagram card
+  </div>
 </template>
 
 <script>
 export default {
-name: "InstagramCard"
-}
+  name: 'InstagramCard',
+};
 </script>
 
 <style scoped>

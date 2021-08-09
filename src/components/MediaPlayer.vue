@@ -1,11 +1,13 @@
 <template>
-$END$
+  <div>
+    This is media player
+  </div>
 </template>
 
 <script>
 export default {
-name: "MediaPlayer"
-}
+  name: 'MediaPlayer',
+};
 </script>
 
 <style scoped>

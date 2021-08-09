@@ -1,11 +1,15 @@
 <template>
-$END$
+  <div>
+    <slot>
+
+    </slot>
+  </div>
 </template>
 
 <script>
 export default {
-name: "BaseCard"
-}
+  name: 'BaseCard',
+};
 </script>
 
 <style scoped>
