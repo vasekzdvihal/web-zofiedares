@@ -1,15 +1,11 @@
 <template>
-  <div>
-    <slot>
-
-    </slot>
-  </div>
+$END$
 </template>
 
 <script>
 export default {
-  name: 'BaseCard',
-};
+name: "TheHeader"
+}
 </script>
 
 <style scoped>
