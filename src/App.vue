@@ -2,7 +2,7 @@
   <div
     id="app"
     class="bg-cover bg-center bg-scroll"
-    :style="{ backgroundImage: 'url(' + require('@/assets/bg/zuzu_wide_pink_rev_high.jpg') + ')' }"
+    :style="{ backgroundImage: 'url(' + require('@/assets/bg/zuzu_wide_pink_low.jpg') + ')' }"
   >
     <the-content-area>
       <base-card>
