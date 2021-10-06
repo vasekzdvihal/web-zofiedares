@@ -1,11 +1,16 @@
 <template>
-  <div id="app" class="bg-cover bg-center bg-scroll" :style="{ backgroundImage: 'url(' + require('@/assets/bg/zuzu_wide_pink_rev_high.jpg') + ')' }">
-      <the-content-area>
-        <base-card>
-          <the-main-logo/>
-          <links-card/>
-        </base-card>
-      </the-content-area>
+  <div
+    id="app"
+    class="bg-cover bg-center bg-scroll"
+    :style="{ backgroundImage: 'url(' + require('@/assets/bg/zuzu_wide_pink_rev_high.jpg') + ')' }"
+  >
+    <the-content-area>
+      <base-card>
+        <the-main-logo />
+        <links-card />
+      </base-card>
+    </the-content-area>
+    <base-footer />
   </div>
 </template>
 
@@ -14,11 +19,16 @@ import BaseCard from '@/components/BaseCard';
 import TheContentArea from '@/components/TheContentArea';
 import TheMainLogo from '@/components/TheMainLogo';
 import LinksCard from '@/components/LinksCard';
+import BaseFooter from "@/components/BaseFooter";
 
 export default {
   name: 'App',
   components: {
-    BaseCard, TheContentArea, TheMainLogo, LinksCard
+    BaseCard,
+    TheContentArea,
+    TheMainLogo,
+    LinksCard,
+    BaseFooter,
   },
   data() {
     return {

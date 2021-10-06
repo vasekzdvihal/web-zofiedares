@@ -1,12 +1,23 @@
 <template>
-  <div class="container shadow-lg rounded-lg border m-1 p-1 bg-gray-100 bg-opacity-25">
-    <ul class="flex flex-row justify-between">
-      <li v-for="media in socialMedias" :key="media.id" class="items-center flex">
-        <div class="w-14 container flex">
-          <img class="p-2" :src="require('@/assets/icon/' + media.icon)">
-        </div>
-      </li>
-    </ul>
+  <div class="justify-center flex">
+    <div class="container shadow-lg rounded-xl border border-gray-800 m-1 p-1 md:w-2/3 bg-gray-800 bg-opacity-25">
+      <ul class="flex flex-row justify-center">
+        <li
+          v-for="media in socialMedias"
+          :key="media.id"
+          class="items-center flex"
+        >
+          <a :href="media.url">
+            <div class="w-14 container flex">
+              <img
+                class="p-2"
+                :src="require('@/assets/icon/' + media.icon)"
+              >
+            </div>
+          </a>
+        </li>
+      </ul>
+    </div>
   </div>
 </template>
 
