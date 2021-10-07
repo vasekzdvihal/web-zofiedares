@@ -1,6 +1,11 @@
 <template>
   <div class="justify-center flex">
-    <div class="container shadow-lg rounded-xl border border-gray-800 m-1 p-1 md:w-2/3 bg-gray-800 bg-opacity-25">
+    <base-modal
+      :show="show"
+      title="Booking"
+      @close="closeModal"
+    />
+    <div class="container shadow-lg rounded-xl border border-gray-300 m-1 p-1 md:w-2/3 bg-gray-300 bg-opacity-25">
       <ul class="flex flex-row justify-center">
         <li
           v-for="media in socialMedias"
@@ -10,11 +15,21 @@
           <a :href="media.url">
             <div class="w-14 container flex">
               <img
-                class="p-2"
+                class="p-2 fill-current"
                 :src="require('@/assets/icon/' + media.icon)"
               >
             </div>
           </a>
+        </li>
+        <li class="items-center flex">
+          <div @click="openModal">
+            <div class="w-14 container flex">
+              <img
+                class="p-2 fill-current"
+                :src="require('@/assets/icon/at-solid.svg')"
+              >
+            </div>
+          </div>
         </li>
       </ul>
     </div>
@@ -22,8 +37,13 @@
 </template>
 
 <script>
+import BaseModal from "./BaseModal";
+
 export default {
   name: 'LinksCard',
+  components: {
+    BaseModal,
+  },
   data() {
     return {
       socialMedias: [
@@ -58,8 +78,17 @@ export default {
           url: 'https://music.apple.com/gb/album/high-on-being-ep/1448257217',
         },
       ],
+      show: false,
     };
   },
+  methods: {
+    openModal() {
+      this.show = true;
+    },
+    closeModal() {
+      this.show = false;
+    },
+  }
 };
 </script>
 

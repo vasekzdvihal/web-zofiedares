@@ -10,7 +10,6 @@
         <links-card />
       </base-card>
     </the-content-area>
-    <base-footer />
   </div>
 </template>
 
@@ -19,7 +18,6 @@ import BaseCard from '@/components/BaseCard';
 import TheContentArea from '@/components/TheContentArea';
 import TheMainLogo from '@/components/TheMainLogo';
 import LinksCard from '@/components/LinksCard';
-import BaseFooter from "@/components/BaseFooter";
 
 export default {
   name: 'App',
@@ -28,7 +26,6 @@ export default {
     TheContentArea,
     TheMainLogo,
     LinksCard,
-    BaseFooter,
   },
   data() {
     return {
